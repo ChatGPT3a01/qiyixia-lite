@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+
+# Mac runtime (Windows-only delivery)
+app/runtime/node-mac-arm64/
+
+# User data (generated at runtime)
+data/config.env
+data/.openclaw/
+data/memory/
+data/backups/
+data/logs/
+
+# Config server deps
+config-server/node_modules/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
