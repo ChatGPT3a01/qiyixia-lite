@@ -46,6 +46,16 @@ if not exist "%DATA_DIR%\memory" mkdir "%DATA_DIR%\memory"
 if not exist "%DATA_DIR%\backups" mkdir "%DATA_DIR%\backups"
 if not exist "%DATA_DIR%\logs" mkdir "%DATA_DIR%\logs"
 
+REM First run: create config.env from example
+if not exist "%DATA_DIR%\config.env" (
+    if exist "%DATA_DIR%\config.env.example" (
+        echo   First run - creating config.env from example...
+        copy "%DATA_DIR%\config.env.example" "%DATA_DIR%\config.env" >nul
+        echo   config.env created
+        echo.
+    )
+)
+
 REM Default config
 if not exist "%STATE_DIR%\openclaw.json" (
     echo   First run - creating default config...
