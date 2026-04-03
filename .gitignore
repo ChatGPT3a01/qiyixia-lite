@@ -1,5 +1,6 @@
-# Dependencies
-node_modules/
+# App dependencies (npm install 安裝的，不需要進 repo)
+/app/core/node_modules/
+/config-server/node_modules/
 
 # Mac runtime (Windows-only delivery)
 app/runtime/node-mac-arm64/
@@ -10,9 +11,6 @@ data/.openclaw/
 data/memory/
 data/backups/
 data/logs/
-
-# Config server deps
-config-server/node_modules/
 
 # OS
 .DS_Store
